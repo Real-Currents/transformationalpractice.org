@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const fs = require('fs');
 const path = require('path');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const pkg = require(__dirname + '/package.json');
 const sassLoaders = [
@@ -70,6 +71,10 @@ const config = {
                 'C:\\Program Files\\Firefox Developer Edition\\firefox.exe' :
                 'firefox'
         }),
+
+        new CopyWebpackPlugin([
+            { from: 'sass', to: './sass' }
+        ]),
 
         new ExtractTextPlugin({ // define where to save the file
             filename: '[name].css',
