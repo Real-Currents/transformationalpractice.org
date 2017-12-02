@@ -1,0 +1,70 @@
+header.Header .Header-inner {
+    background-color: #feeadc;
+  	color: rgba(15, 15, 15, 0.5);
+}
+header.Header .Header-tagline {
+    background-color: #feeadc;
+  	color: rgba(15, 15, 15, 0.5);
+}
+
+footer .Footer,
+footer .Footer-inner {
+    background-color: #feeadc;
+  	color: rgba(15, 15, 15, 0.5);
+}
+
+main section.Main-content {
+    background-color: #feeadc;
+  	color: black;
+}
+
+div.Site-inner section {
+    background-color: #feeadc;
+  	color: rgba(15, 15, 15, 0.5);
+}
+
+body.homepage * main section.Main-content div[data-type="page"] div:first-child div:first-child div:first-child div:first-child div:first-child {
+    background-image: url(https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/59ded745f14aa1aa2b426c53/1507776334329/labyrinth.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body.homepage * main section.Main-content div[data-type="page"] div:first-child div:first-child div:first-child div:first-child div:first-child div {
+  	filter: blur(0em);
+    background-image: none;
+    background-color: transparent;
+  	height: 50%;
+  	margin: auto;
+}
+body.homepage * main section.Main-content div[data-type="page"] div:first-child div:first-child div:first-child div:first-child div:first-child div img#yui_3_17_2_2_1508188132718_508 {
+  	background-image: url(https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/59e525c01f318ddbb0f78190/1508189633251/logo_small.png);
+    background-size: contain;
+  	height: 50%;
+}
+
+body div.Parallax-host-outer div.Parallax-host div.Parallax-item figure {
+  	background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  	background-image: none;
+  	width: 100%;
+}
+body div.Parallax-host-outer div.Parallax-host div.Parallax-item figure img {
+  	background-image: none;
+  	width: 100%;
+  	margin: 0;
+  	padding: 0;
+}
+
+main section#feature div,
+main section#feature div div:first-child,
+main section#feature div div:first-child div,
+main section#feature div div:first-child div div,
+main section#feature div div:first-child div div div div div div img {
+    background-color: green;
+  	background-color: transparent;
+  	background-image: none;
+  	width: 100%;
+  	margin: auto;
+  	padding: 0;
+}
