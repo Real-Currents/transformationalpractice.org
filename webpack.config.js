@@ -44,12 +44,6 @@ const config = {
     },
     plugins: [
         // new webpack.optimize.UglifyJsPlugin({
-        //     output: {
-        //         comments: false
-        //     }
-        // }),
-        //
-        // new webpack.optimize.UglifyJsPlugin({
         //     beautify: !IS_PRODUCTION,
         //     compress: IS_PRODUCTION ? {
         //         drop_console: true, // eslint-disable-line camelcase
@@ -57,7 +51,10 @@ const config = {
         //     } : false,
         //     mangle: IS_PRODUCTION ? {
         //         except: ['_'] // don't mangle lodash
-        //     } : false
+        //     } : false,
+        //     output: {
+        //         comments: false
+        //     }
         // }),
 
         new BrowserSyncPlugin({
