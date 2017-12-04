@@ -70,7 +70,9 @@ const config = {
         }),
 
         new CopyWebpackPlugin([
-            { from: 'sass', to: './sass' }
+            { from: 'sass', to: './sass' },
+            { from: 'site.region', to: './site.region' },
+            { from: 'template.conf', to: './template.conf' }
         ]),
 
         new ExtractTextPlugin({ // define where to save the file

@@ -1,15 +1,39 @@
+$site-background: #feeadc;
+
 body {
-    &, * .Parallax-host-outer, * .Parallax-host, * .Parallax-item, * .sqs-surrounding-overlay {
-        background-color: #feeadc;
+    background: $site-background;
 
-        .Parallax-host {
-            background-color: #feeadc;
+    &.tweak-overlay-parallax-enabled.has-parallax-images:not(.tweak-site-width-option-constrained-width), * .sqs-surrounding-overlay   {
+        background: $site-background !important;
+    }
 
-            .Parallax-item {
-                background-color: #feeadc;
+    #feature, #about:first-child, #about-1, #divider, #divider-1, #divider-2, #location, #schedule {
+        background: transparent;
+    }
 
-                figure {
-                    background-color: #feeadc;
+    #feature {
+        background-attachment: fixed;
+        //background: linear-gradient(45deg, #dca 12%, transparent 0, transparent 88%, #dca 0),
+        //linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+        //linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0) $site-background;
+        //background-size: 25px 25px;
+        background-color: $site-background;
+        background-image: url('https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/5a248e56652deacb41ba8878/1512345178910/shanti_pattern.jpg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
+
+    * .Index-page--has-image, * .Parallax-host-outer, * .Site-inner--index {
+
+        * .Parallax-item {
+            background: $site-background;
+
+            figure {
+                background: $site-background;
+
+                img {
+                    background: $site-background;
                 }
             }
         }
