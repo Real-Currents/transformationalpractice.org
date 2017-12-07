@@ -1,10 +1,10 @@
 $site-background: #feeadc;
 
 body {
-    background: $site-background;
+    background-color: $site-background;
 
-    &.tweak-overlay-parallax-enabled.has-parallax-images:not(.tweak-site-width-option-constrained-width), * .sqs-surrounding-overlay   {
-        background: $site-background !important;
+    &.tweak-overlay-parallax-enabled.has-parallax-images:not(.tweak-site-width-option-constrained-width) {
+        background-color: $site-background !important;
     }
 
     #feature, #about:first-child, #about-1, #divider, #divider-1, #divider-2, #location, #schedule {
@@ -13,29 +13,26 @@ body {
 
     #feature {
         background-attachment: fixed;
-        //background: linear-gradient(45deg, #dca 12%, transparent 0, transparent 88%, #dca 0),
-        //linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
-        //linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0) $site-background;
-        //background-size: 25px 25px;
         background-color: $site-background;
         background-image: url('https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/5a248e56652deacb41ba8878/1512345178910/shanti_pattern.jpg');
-        background-repeat: no-repeat;
         background-position: center top;
         background-size: cover;
+        background-repeat: no-repeat;
     }
+}
 
-    * .Index-page--has-image, * .Parallax-host-outer, * .Site-inner--index {
+.Index-page--has-image, .Parallax-host-outer, .Site-inner--index, .sqs-surrounding-overlay, .tweak-overlay-parallax-enabled {
+    background-color: transparent;
+}
 
-        * .Parallax-item {
-            background: $site-background;
+.tweak-overlay-parallax-enabled .Parallax-host, .tweak-overlay-parallax-enabled .Parallax-item {
+    background-color: transparent;
 
-            figure {
-                background: $site-background;
+    figure {
+        background-color: transparent;
 
-                img {
-                    background: $site-background;
-                }
-            }
+        img {
+            background-color: transparent;
         }
     }
 }

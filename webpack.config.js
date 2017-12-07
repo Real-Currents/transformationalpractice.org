@@ -71,6 +71,7 @@ const config = {
 
         new CopyWebpackPlugin([
             { from: 'sass', to: './sass' },
+            { from: 'styles/*.less', to: './' },
             { from: 'site.region', to: './site.region' },
             { from: 'template.conf', to: './template.conf' }
         ]),
