@@ -1,11 +1,8 @@
 import 'raf/polyfill';
-import controller from '@squarespace/controller';
-import { Tweak } from '@squarespace/core';
+import Tweak from '@squarespace/core';
 import VideoBackground from '@squarespace/video-background';
 
-import resizeEnd from './utils/resizeEnd';
-import './polyfills/classList';
-
+import controller from '@squarespace/controller';
 import AncillaryLayout from './controllers/AncillaryLayout';
 import FooterBreakpoints from './controllers/FooterBreakpoints';
 import HashManager from './controllers/HashManager';
@@ -23,6 +20,10 @@ import Parallax from './controllers/Parallax';
 import ScrollIndicator from './controllers/ScrollIndicator';
 import SiteLoader from './controllers/SiteLoader';
 import UserAccountLink from './controllers/UserAccountLink';
+
+import './polyfills/classList';
+
+import resizeEnd from './utils/resizeEnd';
 
 controller.register('AncillaryLayout', AncillaryLayout);
 controller.register('FooterBreakpoints', FooterBreakpoints);

@@ -24,8 +24,7 @@ if (!("classList" in document.createElement("_"))
 
 if (!('Element' in view)) return;
 
-var
-    classListProp = "classList"
+var classListProp = "classList"
   , protoProp = "prototype"
   , elemCtrProto = view.Element[protoProp]
   , objCtr = Object

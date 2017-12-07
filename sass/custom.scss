@@ -8,17 +8,17 @@ body {
     }
 
     #feature, #about:first-child, #about-1, #divider, #divider-1, #divider-2, #location, #schedule {
-        background: transparent;
+        background-color: transparent;
     }
 
-    #feature {
-        background-attachment: fixed;
-        background-color: $site-background;
-        background-image: url('https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/5a248e56652deacb41ba8878/1512345178910/shanti_pattern.jpg');
-        background-position: center top;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+    //#feature {
+    //    background-attachment: fixed;
+    //    background-color: $site-background;
+    //    background-image: url('https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/5a248e56652deacb41ba8878/1512345178910/shanti_pattern.jpg');
+    //    background-position: center top;
+    //    background-size: cover;
+    //    background-repeat: no-repeat;
+    //}
 }
 
 .Index-page--has-image, .Parallax-host-outer, .Site-inner--index, .sqs-surrounding-overlay, .tweak-overlay-parallax-enabled {

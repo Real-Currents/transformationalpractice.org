@@ -9,7 +9,7 @@
         "url": "https://github.com/Squarespace/wright-framework.git"
     },
     "scripts": {
-        "build": "squarespace assemble && webpack",
+        "build": "webpack scripts/site.js",
         "clean": "squarespace clean",
         "deploy": "squarespace setup && squarespace deploy",
         "lint": "eslint scripts",
@@ -51,7 +51,7 @@
         "copy-webpack-plugin": "^4.2.3",
         "eslint": "^3.14.1",
         "eslint-config-squarespace": "^1.0.0",
-        "webpack": "~3.8.1"
+        "webpack": "~3.10.0"
     },
     "squarespace": {
         "templateId": "brine-demo"
