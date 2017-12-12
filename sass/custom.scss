@@ -1,28 +1,45 @@
 $site-background: #feeadc;
 
 body {
-    background-color: $site-background;
+    background: $site-background !important;
 
     &.tweak-overlay-parallax-enabled.has-parallax-images:not(.tweak-site-width-option-constrained-width) {
-        background-color: $site-background !important;
+        background: $site-background !important;
     }
 
     #feature, #about:first-child, #about-1, #divider, #divider-1, #divider-2, #location, #schedule {
         background-color: transparent;
     }
 
-    //#feature {
-    //    background-attachment: fixed;
-    //    background-color: $site-background;
-    //    background-image: url('https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/5a248e56652deacb41ba8878/1512345178910/shanti_pattern.jpg');
-    //    background-position: center top;
-    //    background-size: cover;
-    //    background-repeat: no-repeat;
-    //}
+    #feature {
+        background: $site-background;
+        background-attachment: fixed;
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        background-image: url('https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/5a302327e4966b2062fb28eb/1513104179493/green_small.png');
+    }
+
+    @media (min-width: 1200px) {
+        #feature {
+            background-image: url('https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/5a30470541920224bf82089f/1513113370923/green_medium.png');
+        }
+    }
+
+    @media (min-width: 1600px) {
+        #feature {
+            background-image: url('https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/5a3022f724a694fe6ea710c0/1513104166805/green_large.png');
+        }
+    }
 }
 
 .Index-page--has-image, .Parallax-host-outer, .Site-inner--index, .sqs-surrounding-overlay, .tweak-overlay-parallax-enabled {
     background-color: transparent;
+
+    .Index-page-content {
+        padding-top: 68px;
+    }
 }
 
 .tweak-overlay-parallax-enabled .Parallax-host, .tweak-overlay-parallax-enabled .Parallax-item {
@@ -38,18 +55,35 @@ body {
 }
 
 header.Header {
-    &.Header--overlay .Header-inner .Header-branding,
-    &.Header--overlay .Header-inner .Header-nav .Header-nav-item {
-        color: rgba(15, 15, 15, 0.75);
+    background-color: transparent;
+
+    .Header-inner {
+        &.Header-inner--bottom {
+            padding-top: 0px;
+
+            div[data-nc-container] {
+                align-self: end;
+
+                .Header-branding {
+                    padding: 2px;
+                }
+            }
+        }
+
+        .Header-branding, .Header-nav .Header-nav-item {
+            a * {
+                box-shadow: 2px 2px rgba(15, 15, 15, 0.5);
+            }
+        }
     }
 
     .Header-inner {
-        background-color: #feeadc;
+        background-color: transparent;
         color: rgba(15, 15, 15, 0.75);
     }
 
     .Header-tagline {
-        background-color: #feeadc;
+        background-color: transparent;
         color: rgba(15, 15, 15, 0.75);
     }
 }
@@ -57,15 +91,14 @@ header.Header {
 footer {
     .Footer,
     .Footer-inner {
-        background-color: #feeadc;
+        background-color: transparent;
         color: rgba(15, 15, 15, 0.5);
     }
 }
 
 main section.Main-content,
 div.Site-inner section {
-    background-color: #feeadc;
-    // color: black;
+    background-color: transparent;
 
     .sqs-block-quote {
         background-color: rgba(15, 15, 15, 0.25);

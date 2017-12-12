@@ -33,6 +33,8 @@ function HeaderOverlay(element) {
     } else {
       offsetElement.style.marginTop = '';
     }
+
+    offsetElement.style.marginTop = '';
   };
 
   /**
