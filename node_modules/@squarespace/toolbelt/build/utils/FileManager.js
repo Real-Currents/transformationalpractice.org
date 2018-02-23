@@ -271,7 +271,7 @@ var FileManager = function () {
       }
       var _file = file,
           filePath = _file.filePath,
-          relPath = _file.relPath,
+          relPath = _file.relPath.replace(this.srcDir, ''), // Sometime .relPath returns full path to source dir
           moduleName = _file.moduleName;
 
       var isModConf = filePath.indexOf('conf') >= 0 && moduleName;

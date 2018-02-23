@@ -13,7 +13,7 @@
         "clean": "squarespace clean",
         "deploy": "squarespace setup && squarespace deploy",
         "lint": "eslint scripts",
-        "start": "squarespace setup && concurrently --kill-others \"npm run watch\" \"npm run server\"",
+        "start": "squarespace setup && concurrently --kill-others \"squarespace assemble --noclean --watch\" \"npm run watch\" \"npm run server\"",
         "server": "squarespace runserver --auth",
         "server:auth": "npm run server -- --run-authenticated",
         "watch": "webpack --watch"
