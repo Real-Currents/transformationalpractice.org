@@ -16,9 +16,10 @@
     <h2 class="entry-title entry-title--large p-name" data-content-field="title"><time class="dt-published date-highlight" datetime="{addedOn|date %F}" pubdate>{addedOn|date %b %y} </time></h2>
 
     <div class="meta-wrapper">
-      {.section author}<div class="blog-meta-item blog-meta-author"><a href="{collection.fullUrl}?author={author.id}" class="blog-author-name">{displayName}</a> </div>{.end}<!--
-
-      -->{.section categories}<div class="blog-meta-item blog-categories">{.repeated section @}<a href="{collection.fullUrl}?category={@|url-encode}" class="blog-category blog-category--{@}">{@}</a>{.alternates with}<span class="blog-meta-delimiter">, </span>{.end}</div>{.end}
+    <!--
+      {.section author}<div class="blog-meta-item blog-meta-author"><a href="{collection.fullUrl}?author={author.id}" class="blog-author-name">{displayName}</a> </div>{.end}
+    -->
+      {.section categories}<div class="blog-meta-item blog-categories">{.repeated section @}<a href="{collection.fullUrl}?category={@|url-encode}" class="blog-category blog-category--{@}">{@}</a>{.alternates with}<span class="blog-meta-delimiter">, </span>{.end}</div>{.end}
     </div>
   </div>
   {.end}
@@ -127,33 +128,6 @@
   </div>
 {.end}
 
-{.section pagination}
-<section class="blog-item-pagination">
-  {.section prevItem}<a href="{fullUrl}" class="blog-item-pagination-link blog-item-pagination-link--prev">
-    <div class="blog-item-label">
-      <svg class="prev-icon" viewBox="0 0 50 100">
-        <use xlink:href="/assets/ui-icons.svg#thick-arrow-left-icon"></use>
-      </svg>
-    </div>
-    <span class="pagination-title-wrapper">
-      {.main-image?}<img {@|image-meta} />{.end}
-      <h2 class="blog-item-pagination-title"><time class="dt-published date-pagination" datetime="{addedOn|date %F}" pubdate>{addedOn|date %b %e} </time>{title}</h2>
-    </span>
-  </a>{.or}{.end}<!--
-  -->{.section nextItem}<a href="{fullUrl}" class="blog-item-pagination-link blog-item-pagination-link--next">
-    <div class="blog-item-label">
-      <svg class="next-icon" viewBox="0 0 50 100">
-        <use xlink:href="/assets/ui-icons.svg#thick-arrow-right-icon"></use>
-      </svg>
-    </div>
-    <span class="pagination-title-wrapper">
-      {.main-image?}<img {@|image-meta} />{.end}
-      <h2 class="blog-item-pagination-title"><time class="dt-published date-pagination" datetime="{addedOn|date %F}" pubdate>{addedOn|date %b %e} </time>{title}</h2>
-    </span>
-  </a>{.or}{.end}
-</section>
-{.end}
-
 {.section item}
   {.if collection.features.relatedItems.isEnabled}
     <squarespace:related collectionId="{collection.id}" limit="3" itemId="{id}">
@@ -214,3 +188,35 @@
   {.end}
 </div>
 {.end}
+
+{.section pagination}
+<section class="blog-item-pagination">
+    {.section prevItem}
+    <a href="{fullUrl}" class="blog-item-pagination-link blog-item-pagination-link--prev">
+      <div class="blog-item-label">
+        <svg class="prev-icon" viewBox="0 0 50 100">
+          <use xlink:href="/assets/ui-icons.svg#thick-arrow-left-icon"></use>
+        </svg>
+        Previous: <h2 class="blog-item-pagination-title">{title}</h2>
+      </div>
+      <!--span class="pagination-title-wrapper">
+        {.main-image?}<img {@|image-meta} />{.end}
+        <h2 class="blog-item-pagination-title">Previous: <time class="dt-published date-pagination" datetime="{addedOn|date %F}" pubdate>{addedOn|date %b %e} </time>{title}</h2>
+      </span-->
+    </a>{.or}{.end}
+    {.section nextItem}
+    <a href="{fullUrl}" class="blog-item-pagination-link blog-item-pagination-link--next">
+      <div class="blog-item-label">
+        <svg class="next-icon" viewBox="0 0 50 100">
+          <use xlink:href="/assets/ui-icons.svg#thick-arrow-right-icon"></use>
+        </svg>
+        Next: <h2 class="blog-item-pagination-title">{title}</h2>
+      </div>
+      <!--span class="pagination-title-wrapper">
+        {.main-image?}<img {@|image-meta} />{.end}
+        <h2 class="blog-item-pagination-title"><time class="dt-published date-pagination" datetime="{addedOn|date %F}" pubdate>{addedOn|date %b %e} </time>{title}</h2>
+      </span-->
+    </a>{.or}{.end}
+</section>
+{.end}
+
