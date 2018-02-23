@@ -1,41 +1,67 @@
-$site-background: #feeadc;
+@import "assets";
 
 body {
-    background: $site-background !important;
+    // background: $site-background !important;
 
-    &.tweak-overlay-parallax-enabled.has-parallax-images:not(.tweak-site-width-option-constrained-width) {
-        background: $site-background !important;
-    }
+    // &.tweak-overlay-parallax-enabled.has-parallax-images:not(.tweak-site-width-option-constrained-width) {
+    //     background: $site-background !important;
+    // }
 
     #feature, #about:first-child, #about-1, #divider, #divider-1, #divider-2, #location, #schedule {
         background-color: transparent;
     }
 
-    #feature {
-        background: $site-background;
+    #feature, #new-home {
+        //background: $site-background;
         background-attachment: fixed;
         background-position: center top;
-        background-size: cover;
         background-repeat: no-repeat;
+        background-size: 100% auto;
 
-        background-image: url('https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/5a302327e4966b2062fb28eb/1513104179493/green_small.png');
-    }
+        background-image: $feature-background-small;
 
-    @media (min-width: 1200px) {
-        #feature {
-            background-image: url('https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/5a30470541920224bf82089f/1513113370923/green_medium.png');
+
+        & .Index-page-content.sqs-alternate-block-style-container {
+            padding-bottom: 0px;
+
+            div.sqs-layout.sqs-grid-12.columns-12[data-type="page"] {
+                margin-top: 168px;
+
+                * {
+                    text-shadow: 2px 2px rgba(15, 15, 15, 0.5);
+                }
+
+            }
+        }
+
+        &.Index-page--has-image .Index-page-content {
+            padding-top: 68px;
+
+            .sqs-block-content h1 {
+                color: hsl(54, 100%, 90%);
+            }
         }
     }
 
-    @media (min-width: 1600px) {
-        #feature {
-            background-image: url('https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/5a3022f724a694fe6ea710c0/1513104166805/green_large.png');
+    @media (min-width: 1440px) {
+        #feature, #new-home {
+            background-image: $feature-background-medium;
+        }
+    }
+
+    @media (min-width: 2000px) {
+        #feature, #new-home {
+            background-image: $feature-background-large;
         }
     }
 }
 
-.Index-page--has-image, .Parallax-host-outer, .Site-inner--index, .sqs-surrounding-overlay, .tweak-overlay-parallax-enabled {
+.Index-page--has-image, .Intro--has-image, .Parallax-host-outer, .Site-inner--index, .sqs-surrounding-overlay, .tweak-overlay-parallax-enabled {
     background-color: transparent;
+
+    &.Intro {
+        height: 160px;
+    }
 
     .Index-page-content {
         padding-top: 68px;
@@ -58,11 +84,19 @@ header.Header {
     background-color: transparent;
 
     .Header-inner {
+        background-color: transparent;
+        color: rgba(15, 15, 15, 0.75);
+
         &.Header-inner--bottom {
+            margin-top: 24px;
             padding-top: 0px;
 
             div[data-nc-container] {
-                align-self: end;
+                align-self: unset;
+
+                &[data-nc-container="bottom-right"] {
+                    margin-top: -100px;
+                }
 
                 .Header-branding {
                     padding: 2px;
@@ -70,16 +104,11 @@ header.Header {
             }
         }
 
-        .Header-branding, .Header-nav .Header-nav-item {
-            a * {
-                box-shadow: 2px 2px rgba(15, 15, 15, 0.5);
+        .Header-branding, .Header-nav-item {
+            &, span {
+                font-weight: normal;
             }
         }
-    }
-
-    .Header-inner {
-        background-color: transparent;
-        color: rgba(15, 15, 15, 0.75);
     }
 
     .Header-tagline {
@@ -87,6 +116,15 @@ header.Header {
         color: rgba(15, 15, 15, 0.75);
     }
 }
+
+
+body.tweak-header-primary-nav-hover-style-plain .Header--overlay .Header-nav .Header-nav-item {
+    &, span {
+        font-weight: normal;
+        text-shadow: 2px 2px rgba(15, 15, 15, 0.5);
+    }
+}
+
 
 footer {
     .Footer,
@@ -100,63 +138,36 @@ main section.Main-content,
 div.Site-inner section {
     background-color: transparent;
 
+    .blog-list {
+        .BlogList-item {
+            .thumbnail-title-wrapper {
+                .BlogList-item-image {
+                    .BlogList-item-image-link {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .sqs-block-quote {
         background-color: rgba(15, 15, 15, 0.25);
         background-clip: content-box;
+        padding: 0;
 
-        blockquote {
-            padding: 1%;
-            text-shadow: 2px 2px rgba(15, 15, 15, 0.5);
-        }
+        figure {
+            padding-top: 5%;
 
-        .source {
-            text-shadow: 2px 2px rgba(15, 15, 15, 0.5);
+            blockquote {
+                padding: 1%;
+                text-shadow: 2px 2px rgba(15, 15, 15, 0.5);
+            }
+
+            .source {
+                text-shadow: 2px 2px rgba(15, 15, 15, 0.5);
+            }
         }
     }
 }
-
-//body.homepage * main section.Main-content div[data-type="page"] div:first-child div:first-child div:first-child div:first-child div:first-child {
-//    background-image: url(https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/59ded745f14aa1aa2b426c53/1507776334329/labyrinth.jpg);
-//    background-position: center;
-//    background-repeat: no-repeat;
-//    background-size: cover;
-//}
-//body.homepage * main section.Main-content div[data-type="page"] div:first-child div:first-child div:first-child div:first-child div:first-child div {
-//  	filter: blur(0em);
-//    background-image: none;
-//    background-color: transparent;
-//  	height: 50%;
-//  	margin: auto;
-//}
-//body.homepage * main section.Main-content div[data-type="page"] div:first-child div:first-child div:first-child div:first-child div:first-child div img#yui_3_17_2_2_1508188132718_508 {
-//  	background-image: url(https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/59e525c01f318ddbb0f78190/1508189633251/logo_small.png);
-//    background-size: contain;
-//  	height: 50%;
-//}
-//
-//body div.Parallax-host-outer div.Parallax-host div.Parallax-item figure {
-//  	background-position: center;
-//    background-repeat: no-repeat;
-//    background-size: contain;
-//  	background-image: none;
-//  	width: 100%;
-//}
-//body div.Parallax-host-outer div.Parallax-host div.Parallax-item figure img {
-//  	background-image: none;
-//  	width: 100%;
-//  	margin: 0;
-//  	padding: 0;
-//}
-//
-//main section#feature div,
-//main section#feature div div:first-child,
-//main section#feature div div:first-child div,
-//main section#feature div div:first-child div div,
-//main section#feature div div:first-child div div div div div div img {
-//    background-color: green;
-//  	background-color: transparent;
-//  	background-image: none;
-//  	width: 100%;
-//  	margin: auto;
-//  	padding: 0;
-//}

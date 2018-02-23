@@ -6,3 +6,4 @@ node_modules
 build
 npm-debug.log
 package-lock.json
+sass/_assets.scss

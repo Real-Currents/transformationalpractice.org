@@ -71,6 +71,9 @@ const config = {
         }),
 
         new CopyWebpackPlugin([
+            { from: 'assets', to: './assets' },
+            { from: 'blocks', to: './blocks' },
+            { from: 'collections', to: './collections' },
             { from: 'sass', to: './sass' },
             { from: 'styles/*.less', to: './' },
             { from: 'site.region', to: './site.region' },

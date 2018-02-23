@@ -1,0 +1,8 @@
+{.repeated section items}
+  <article>
+    {.section title}<h1>{@}</h1>{.end}
+    {.image?}<img {@|image-meta} data-load="true" />{.end}
+    {.section body}<div>{@}</div>{.end}
+    <hr />
+  </article>
+{.end}

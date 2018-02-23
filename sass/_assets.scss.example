@@ -1,0 +1,4 @@
+$site-background: #feeadc;
+$feature-background-small: url('https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/5a302327e4966b2062fb28eb/1513104179493/green_small.png');
+$feature-background-medium: url('https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/5a30470541920224bf82089f/1513113370923/green_medium.png');
+$feature-background-large:url('https://static1.squarespace.com/static/58bd80c537c581c8b912d6c8/t/5a3022f724a694fe6ea710c0/1513104166805/green_large.png');
