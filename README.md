@@ -1,7 +1,7 @@
-Wright
+[The Center For Transformational Practice](https://www.transformationalpractice.org)
 ------------------------------
 
-A versatile, all-purpose Squarespace Template Framework.
+This [Squarespace template](https://github.com/Real-Currents/transformationalpractice.org) for [transformationalpractice.org](https://www.transformationalpractice.org) is built from [Sonoro](https://sonora-demo.squarespace.com/) > [Brine](https://brine-demo.squarespace.com/) and based on [Wright](https://github.com/Squarespace/wright-framework), a versatile, all-purpose Squarespace Template Framework.
 
 *NOTICE: This code is licensed to you pursuant to Squarespace’s Developer Terms of Use. See license section below.*
 
