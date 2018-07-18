@@ -65,7 +65,9 @@ const config = {
             port: 3000,
             proxy: 'localhost:9000',
             serveStatic: [ 'build/styles' ],
-            browser: (fs.existsSync('C:\\Program Files\\Firefox Developer Edition\\firefox.exe')) ?
+            browser: (fs.existsSync('/usr/local/share/applications/Firefox\ Developer')) ?
+                '/usr/local/share/applications/Firefox\ Developer' :
+                (fs.existsSync('C:\\Program Files\\Firefox Developer Edition\\firefox.exe')) ?
                 'C:\\Program Files\\Firefox Developer Edition\\firefox.exe' :
                 'firefox'
         }),

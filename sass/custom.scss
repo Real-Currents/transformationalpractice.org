@@ -14,44 +14,63 @@ body {
     #feature, #new-home {
         //background: $site-background;
         background-attachment: fixed;
-        background-position: center top;
+        background-position: center 60px;
         background-repeat: no-repeat;
         background-size: 100% auto;
 
         background-image: $feature-background-small;
 
+        @media (min-width: 640px) {
+            background-position: center top;
+        }
+
+        @media (min-width: 1440px) {
+            background-image: $feature-background-medium;
+        }
+
+        @media (min-width: 2000px) {
+            background-image: $feature-background-large;
+        }
 
         & .Index-page-content.sqs-alternate-block-style-container {
             padding-bottom: 0px;
 
             div.sqs-layout.sqs-grid-12.columns-12[data-type="page"] {
-                margin-top: 168px;
+
+                @media (min-width: 640px) {
+                    margin-top: 168px;
+                }
+
+                @media (min-width: 642px) {
+                    margin-top: 68px;
+                }
+
+                @media (min-width: 1200px) {
+                    margin-top: 168px;
+                }
 
                 * {
                     text-shadow: 2px 2px rgba(15, 15, 15, 0.5);
-                }
 
+
+                    @media (max-width: 640px) {
+                        &.row.sqs-row {
+                            div.col.sqs-col-12 {
+                                div.sqs-block-spacer div:first-child {
+                                    max-height: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
         &.Index-page--has-image .Index-page-content {
-            padding-top: 68px;
 
             .sqs-block-content h1 {
                 color: hsl(54, 100%, 90%);
             }
-        }
-    }
-
-    @media (min-width: 1440px) {
-        #feature, #new-home {
-            background-image: $feature-background-medium;
-        }
-    }
-
-    @media (min-width: 2000px) {
-        #feature, #new-home {
-            background-image: $feature-background-large;
         }
     }
 }
@@ -64,7 +83,13 @@ body {
     }
 
     .Index-page-content {
-        padding-top: 68px;
+        margin-top: 0px;
+        padding-top: 0px;
+
+        @media (min-width: 1200px) {
+            margin-top: 168px;
+            padding-top: 68px;
+        }
     }
 }
 
