@@ -89,19 +89,19 @@ const config = {
         new webpack.LoaderOptionsPlugin({
             minimize: true
         }),
-        new UglifyJSPlugin({
-            beautify: !IS_PRODUCTION,
-            compress: IS_PRODUCTION ? {
-                drop_console: true, // eslint-disable-line camelcase
-                warnings: false
-            } : false,
-            mangle: IS_PRODUCTION ? {
-                except: ['_'] // don't mangle lodash
-            } : false,
-            output: {
-                comments: false
-            }
-        })
+        // new UglifyJSPlugin({
+        //     beautify: !IS_PRODUCTION,
+        //     compress: IS_PRODUCTION ? {
+        //         drop_console: true, // eslint-disable-line camelcase
+        //         warnings: false
+        //     } : false,
+        //     mangle: IS_PRODUCTION ? {
+        //         except: ['_'] // don't mangle lodash
+        //     } : false,
+        //     output: {
+        //         comments: false
+        //     }
+        // })
     ]
 };
 

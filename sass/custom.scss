@@ -14,7 +14,7 @@ body {
     #feature, #new-home {
         //background: $site-background;
         background-attachment: fixed;
-        background-position: center 60px;
+        background-position: center 100px;
         background-repeat: no-repeat;
         background-size: 100% auto;
 
@@ -35,7 +35,7 @@ body {
         & .Index-page-content.sqs-alternate-block-style-container {
             padding-bottom: 0px;
 
-            div.sqs-layout.sqs-grid-12.columns-12[data-type="page"] {
+            div.sqs-layout.sqs-grid-12.columns-12[data-type="page"]:first-child {
 
                 @media (min-width: 640px) {
                     margin-top: 168px;
@@ -87,7 +87,6 @@ body {
         padding-top: 0px;
 
         @media (min-width: 1200px) {
-            margin-top: 168px;
             padding-top: 68px;
         }
     }
